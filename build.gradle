@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group = 'agh.ics.oop.project'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "17"
+    modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.media', 'javafx.swing', 'javafx.web']
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName = 'agh.ics.rrir.project.Main'
+}
+

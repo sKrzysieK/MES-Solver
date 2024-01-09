@@ -9,7 +9,7 @@ public class VectorL {
     private double[] vector;
     private int n;
     private double h;
-    private final static double G = 6.674e-1;
+    private final static double G = 6.674e-11;
 
     public VectorL(int n, double h){
         this.n = n;
